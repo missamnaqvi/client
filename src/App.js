@@ -10,6 +10,7 @@ import "./App.css";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import PGRegistrationForm from "./components/PgRegistrationForm";
+import HomePage from "./components/home";
 
 function App() {
   // const { isAuthenticated, loading } = useSelector(false);
@@ -47,6 +48,7 @@ function App() {
       <Router>
         <Toaster />
         <Navbar />
+        <HomePage />
         <PGRegistrationForm />
         <Footer />
       </Router>
