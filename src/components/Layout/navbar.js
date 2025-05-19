@@ -43,37 +43,54 @@ const Navbar = () => {
   return (
     <>
       {/* First Navbar */}
-      <nav className="bg-blue-600 text-white p-4 shadow-md">
+      <nav className="bg-black text-white p-4 shadow-md">
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <Link to="/" className="flex">
               <Building className="w-8 h-8" />
-              <h1 className="text-2xl font-bold">PG Management System</h1>
+              <h1 className="text-2xl font-bold">logo</h1>
             </Link>
           </div>
 
           <div className="flex space-x-6">
             <Link
-              to="/student"
+              to="/create"
               className="hover:text-blue-200 flex items-center space-x-1"
             >
               <Home className="w-5 h-5" />
-              <span>Student Registration</span>
+              <span>Registration</span>
             </Link>
             <Link
-              to="/"
+              to="/pgregister"
               className="hover:text-blue-200 flex items-center space-x-1"
             >
               <Home className="w-5 h-5" />
-              <span>Home</span>
+              <span>PG Registration</span>
             </Link>
             <Link
-              to="/"
+              to="/owneregister"
               className="hover:text-blue-200 flex items-center space-x-1"
             >
-              <BookOpen className="w-5 h-5" />
-              <span>Explore PGs</span>
+              <Home className="w-5 h-5" />
+              <span>Owner Registration</span>
             </Link>
+            <Link
+              to="/pgregister"
+              className="hover:text-blue-200 flex items-center space-x-1"
+            >
+              <Home className="w-5 h-5" />
+              <span>pgregister</span>
+            </Link>
+            
+            <Link
+              to="/login"
+              className="hover:text-blue-200 flex items-center space-x-1"
+            >
+              <Users className="w-5 h-5" />
+              <span>Login</span>
+            </Link>
+            
+            
             {/* {isAuthenticated && (
               <div className="">
                 {" "}

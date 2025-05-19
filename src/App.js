@@ -1,16 +1,21 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Toaster } from "react-hot-toast";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  useNavigate,
 } from "react-router-dom";
 import "./App.css";
-import Navbar from "./components/navbar";
-import Footer from "./components/footer";
-import PGRegistrationForm from "./components/PgRegistrationForm";
-import HomePage from "./components/home";
+
+import Navbar from "./components/Layout/navbar";
+import Footer from "./components/Layout/footer";
+import PGRegistrationForm from "./student/PgRegistrationForm";
+import Home from "./components/home";
+import PgRegistration from "./student/PgRegistration";
+import ResidentRegistrationForm from "./student/ResidentRegistrationForm";
+import NotFound from "./components/NotFound";
+import PGOwnerRegistration from "./student/PgOwnerRegistraion";
+import LoginForm from "./components/Auth/LoginForm";
 
 function App() {
   // const { isAuthenticated, loading } = useSelector(false);
@@ -42,14 +47,21 @@ function App() {
   //     </div>
   //   );
   // }
-
   return (
-    <div className=" w-full mx-auto">
+    <div className="w-full mx-auto">
+      <Toaster />
       <Router>
-        <Toaster />
         <Navbar />
-        <HomePage />
-        <PGRegistrationForm />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<NotFound />} />
+          <Route path="/create" element={<ResidentRegistrationForm />} />
+          <Route path="/pgregister" element={<PGRegistrationForm />} />
+          <Route path="/pgregister" element={<PgRegistration />} />
+          <Route path="/owneregister" element={<PGOwnerRegistration />} />
+          <Route path="/login" element={<LoginForm />} />
+
+        </Routes>
         <Footer />
       </Router>
     </div>

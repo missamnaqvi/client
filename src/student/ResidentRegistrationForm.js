@@ -66,7 +66,7 @@ const ResidentRegistrationForm = () => {
 
       // Send the form data to the server
       const response = await fetch(
-        `${process.env.REACT_APP_API_URL}/residentregistration`,
+        `${process.env.REACT_APP_API_URL}/api/users/register`,
         {
           method: "POST",
           headers: {
@@ -90,7 +90,7 @@ const ResidentRegistrationForm = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto mt-10 p-6 bg-white shadow-lg rounded-md">
+    <div className="max-w-4xl mx-auto my-10 p-6 bg-white shadow-lg rounded-md">
       <h2 className="text-2xl font-bold text-center mb-6">
         Resident Registration
       </h2>
@@ -308,7 +308,7 @@ const ResidentRegistrationForm = () => {
         {/* Medical History */}
         <div>
           <label className="block text-sm font-medium text-gray-700">
-            Medical History
+            Medical History (ex. any disease)
           </label>
           <textarea
             {...register("medicalHistory")}
@@ -325,7 +325,7 @@ const ResidentRegistrationForm = () => {
         {/* Extra Curricular Activities */}
         <div>
           <label className="block text-sm font-medium text-gray-700">
-            Extra Curricular Activities
+            Extra Curricular Activities (Sport , internship etc)
           </label>
           <textarea
             {...register("extraCurricularActivities")}
@@ -337,7 +337,7 @@ const ResidentRegistrationForm = () => {
         {/* Vehicle Number */}
         <div>
           <label className="block text-sm font-medium text-gray-700">
-            Vehicle Number
+            Vehicle Number (if Applicable)
           </label>
           <input
             type="text"
@@ -521,7 +521,7 @@ const ResidentRegistrationForm = () => {
         <div className="text-center">
           <button
             type="submit"
-            className="px-6 py-2 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="px-6 py-2 w-full bg-black text-white font-semibold rounded-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400"
           >
             Submit
           </button>

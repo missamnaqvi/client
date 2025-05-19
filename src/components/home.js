@@ -1,22 +1,18 @@
 import React, { useState } from "react";
 import {
-  // Home,
   Building,
   Users,
   Search,
-  // BookOpen,
   CreditCard,
 } from "lucide-react";
-import PGRegistrationForm from "./PgRegistrationForm";
-import PgRegistration from "./Auth/PgRegistration";
 
-const HomePage = () => {
+const Home = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <header className="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-20 text-center">
+      <header className="bg-gradient-to-r from-gray-500 to-black-600 text-white py-20 text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-extrabold mb-4">
             Find Your Perfect Paying Guest Accommodation
@@ -72,12 +68,8 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <PGRegistrationForm/>
-      <PgRegistration/>
     </div>
   );
 };
 
-export default HomePage;
+export default Home;

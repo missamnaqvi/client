@@ -112,7 +112,7 @@ const PGOwnerRegistration = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex">
       {/* Sidebar */}
-      <div className="w-64 bg-blue-600 text-white p-6">
+      <div className="w-64 bg-gray-600 text-white p-6">
         <div className="flex items-center mb-10">
           <Building className="mr-3" size={36} />
           <h2 className="text-2xl font-bold">PG Manager</h2>
@@ -143,8 +143,8 @@ const PGOwnerRegistration = () => {
             <Settings className="mr-3" /> Settings
           </a>
         </nav>
-        <div className="absolute bottom-6 left-0 w-full px-6">
-          <button className="flex items-center w-full p-3 rounded hover:bg-blue-700 transition">
+        <div className="absolute bottom-6 left-0 max-w-[13%] w-full px-3">
+          <button className="flex items-center w-full p-3 rounded hover:bg-gray-700  transition">
             <LogOut className="mr-3" /> Logout
           </button>
         </div>
@@ -154,13 +154,13 @@ const PGOwnerRegistration = () => {
       <div className="flex-grow p-10">
         <div className="bg-white shadow-md rounded-lg p-8">
           <h2 className="text-3xl font-bold mb-6 flex items-center">
-            <Building className="mr-4 text-blue-600" />
+            <Building className="mr-4 text-black" />
             PG Registration
           </h2>
 
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Personal Information Step */}
-            {currentStep === 1 && (
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label className="block mb-2">Owner Name</label>
@@ -208,10 +208,10 @@ const PGOwnerRegistration = () => {
                   </div>
                 </div>
               </div>
-            )}
+          
 
             {/* PG Property Details Step */}
-            {currentStep === 2 && (
+           
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label className="block mb-2">PG Name</label>
@@ -279,10 +279,10 @@ const PGOwnerRegistration = () => {
                   </div>
                 </div>
               </div>
-            )}
+        
 
             {/* Amenities and Rules Step */}
-            {currentStep === 3 && (
+           
               <div>
                 <div className="mb-6">
                   <h3 className="text-xl font-semibold mb-4">
@@ -334,36 +334,14 @@ const PGOwnerRegistration = () => {
                   </div>
                 </div>
               </div>
-            )}
+         
 
             {/* Navigation Buttons */}
-            <div className="flex justify-between mt-8">
-              {currentStep > 1 && (
-                <button
-                  type="button"
-                  onClick={() => setCurrentStep((prev) => prev - 1)}
-                  className="px-6 py-2 border rounded-lg hover:bg-gray-100"
-                >
-                  Previous
-                </button>
-              )}
-
-              {currentStep < 3 ? (
-                <button
-                  type="button"
-                  onClick={() => setCurrentStep((prev) => prev + 1)}
-                  className="ml-auto px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
-                >
-                  Next
-                </button>
-              ) : (
-                <button
-                  type="submit"
-                  className="ml-auto px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700"
-                >
+            <div className="text-center mt-8">
+              <button type="submit" className="ml-auto px-6 py-2 bg-black text-white rounded-lg hover:bg-gray-700">
                   Register PG
                 </button>
-              )}
+
             </div>
           </form>
         </div>

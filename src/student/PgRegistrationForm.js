@@ -14,7 +14,7 @@ const PGRegistrationForm = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto mt-10 p-8 bg-white shadow-lg rounded-lg">
+    <div className="max-w-3xl mx-auto my-10 p-8 bg-white shadow-lg rounded-lg border border-[#ddd]">
       <h2 className="text-2xl font-bold mb-6 text-center">
         PG Registration Form
       </h2>
@@ -26,7 +26,7 @@ const PGRegistrationForm = () => {
           </label>
           <input
             {...register("pgName", { required: "PG Name is required" })}
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500"
           />
           {errors.pgName && (
             <span className="text-red-500 text-sm">
@@ -44,7 +44,7 @@ const PGRegistrationForm = () => {
             {...register("ownerName", {
               required: "Owner's Full Name is required",
             })}
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500"
           />
           {errors.ownerName && (
             <span className="text-red-500 text-sm">
@@ -67,7 +67,7 @@ const PGRegistrationForm = () => {
                 message: "Contact Number must be 10 digits",
               },
             })}
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500"
           />
           {errors.contactNumber && (
             <span className="text-red-500 text-sm">
@@ -90,7 +90,7 @@ const PGRegistrationForm = () => {
                 message: "Invalid Email Address",
               },
             })}
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500"
           />
           {errors.email && (
             <span className="text-red-500 text-sm">{errors.email.message}</span>
@@ -104,7 +104,7 @@ const PGRegistrationForm = () => {
           </label>
           <textarea
             {...register("address", { required: "Address is required" })}
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500"
           />
           {errors.address && (
             <span className="text-red-500 text-sm">
@@ -120,7 +120,7 @@ const PGRegistrationForm = () => {
           </label>
           <input
             {...register("city", { required: "City is required" })}
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500"
           />
           {errors.city && (
             <span className="text-red-500 text-sm">{errors.city.message}</span>
@@ -134,7 +134,7 @@ const PGRegistrationForm = () => {
           </label>
           <input
             {...register("state", { required: "State is required" })}
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500"
           />
           {errors.state && (
             <span className="text-red-500 text-sm">{errors.state.message}</span>
@@ -155,7 +155,7 @@ const PGRegistrationForm = () => {
                 message: "Pincode must be 6 digits",
               },
             })}
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500"
           />
           {errors.pincode && (
             <span className="text-red-500 text-sm">
@@ -171,7 +171,7 @@ const PGRegistrationForm = () => {
           </label>
           <select
             {...register("pgType", { required: "Type of PG is required" })}
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500"
           >
             <option value="">Select Type</option>
             <option value="Boys">Boys</option>
@@ -188,9 +188,9 @@ const PGRegistrationForm = () => {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-blue-500 text-white font-semibold py-2 rounded-lg hover:bg-blue-600 transition duration-200"
+          className="w-full bg-black text-white font-semibold py-2 rounded-lg hover:bg-gray-600 transition duration-200"
         >
-          Register PG
+          Register
         </button>
       </form>
     </div>
